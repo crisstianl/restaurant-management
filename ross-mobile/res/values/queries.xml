@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="Q_GET_ITEMS_ORDER_BY_CATEGORY">select * from [ITEM] join [CATEGORY] on [ITEM].[CategoryId] == [CATEGORY].[Id] order by [CATEGORY].[Description]</string>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/main_options_menu_home"
+        android:icon="@drawable/ic_action_view_as_grid"
+        android:showAsAction="always"
+        android:title="@string/main_options_menu_home_text"/>
+    <item
+        android:id="@+id/main_options_menu_search"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="always"
+        android:title="@string/main_options_menu_search_text"/>
+    <item
+        android:id="@+id/main_options_menu_new"
+        android:icon="@drawable/ic_action_new_event"
+        android:showAsAction="ifRoom"
+        android:title="@string/main_options_menu_new_text"/>
+    <item
+        android:id="@+id/main_options_menu_ready"
+        android:icon="@drawable/ic_action_import_export"
+        android:showAsAction="ifRoom"
+        android:title="@string/main_options_menu_ready_text"/>
+    <item
+        android:id="@+id/main_options_menu_pending"
+        android:icon="@drawable/ic_action_add_to_queue"
+        android:showAsAction="ifRoom"
+        android:title="@string/main_options_menu_pending_text"/>
+    <item
+        android:id="@+id/main_options_menu_inprogress"
+        android:icon="@drawable/ic_action_upload"
+        android:showAsAction="ifRoom"
+        android:title="@string/main_options_menu_submitted_text"/>
+
+</menu>

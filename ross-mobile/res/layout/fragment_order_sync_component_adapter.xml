@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/fragment_order_sync_component_adapter_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_micro"
+        android:background="@drawable/ic_cart_off"
+        android:contentDescription="@string/dictionary_none" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_order_sync_component_adapter_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fragment_order_sync_component_adapter_icon" >
+
+        <TextView
+            android:id="@+id/fragment_order_sync_component_adapter_item_id"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_order_sync_component_adapter_order_row_quantity"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/fragment_order_sync_component_adapter_order_row_total"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_order_sync_component_adapter_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_order_sync_component_adapter_line_1"
+        android:layout_toRightOf="@id/fragment_order_sync_component_adapter_icon" >
+
+        <TextView
+            android:id="@+id/fragment_order_sync_component_adapter_item_title"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/fragment_order_sync_component_adapter_order_row_discount" />
+
+        <TextView
+            android:id="@id/fragment_order_sync_component_adapter_order_row_discount"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

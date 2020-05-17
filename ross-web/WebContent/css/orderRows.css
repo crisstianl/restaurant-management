@@ -1,0 +1,41 @@
+/* CONTENT */
+#master {
+	display: block;	
+	width: 100%;
+	height: auto;
+	padding: 10px 10px 10px 10px;	
+	box-sizing: border-box;
+	background-color: #D8D8D8;
+	border-bottom: 3px solid black;
+}
+#details {
+	display: block;	
+	width: 100%;
+	min-height: 800px;	
+	background-color: #D8D8D8;
+}
+
+/* MASTER */
+#master .sectionA {
+	display: inline-block;
+	width: 19%;
+	vertical-align: top;
+	font-size: large;
+}
+#master .sectionB {
+	display: inline-block;
+	width: 15%;
+	vertical-align: top;
+	font-size: large;
+}
+#master .statusFilter {
+	width: 90%;
+	font-size: large;
+	font-family: sans-serif;
+}
+
+/* DETAILS */
+#details .ordersList {
+	display: block;
+	width: 100%;
+}

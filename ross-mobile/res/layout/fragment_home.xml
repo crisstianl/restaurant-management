@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="@dimen/padding_small" >
+
+    <GridView
+        android:id="@+id/fragment_home_menu_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:horizontalSpacing="60dp"
+        android:verticalSpacing="60dp"
+        android:numColumns="2" />
+
+</RelativeLayout>

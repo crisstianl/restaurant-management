@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_item_height"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_micro" >
+
+    <ImageView
+        android:id="@+id/fragment_items_adapter_cart"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_micro"
+        android:background="@drawable/ic_image_off"
+        android:contentDescription="@string/dictionary_none" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_items_adapter_idTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fragment_items_adapter_cart" >
+
+        <TextView
+            android:id="@+id/fragment_items_adapter_id"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_items_adapter_id_separator"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fragment_items_adapter_id"
+            android:text=" - "
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_items_adapter_title"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/fragment_items_adapter_price"
+            android:layout_toRightOf="@id/fragment_items_adapter_id_separator"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/fragment_items_adapter_price"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_items_adapter_idTitle"
+        android:layout_toRightOf="@id/fragment_items_adapter_cart" >
+
+        <TextView
+            android:id="@+id/fragment_items_adapter_category"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/fragment_items_adapter_tags_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

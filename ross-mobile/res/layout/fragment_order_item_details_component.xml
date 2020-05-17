@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ross="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_code_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_code_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_code"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_title_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_title_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_title"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_description_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_description_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_description"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_category_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_category_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_category"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_price_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_price_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_price"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_discount_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_discount_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_discount"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_total_text"
+                style="@style/textLabelTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:gravity="right"
+                android:text="@string/fragment_order_item_details_total_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_item_details_total"
+                style="@style/textLabelDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:paddingLeft="@dimen/padding_medium"
+                android:text="@string/dictionary_not_available" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center_horizontal" >
+
+            <eu.cristianl.ross.android.widgets.NumberPicker
+                android:id="@+id/fragment_order_item_details_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ross:plusminus_height="50dp"
+                ross:plusminus_width="50dp"
+                ross:textSize="@dimen/font_size_small"
+                ross:textarea_height="50dp"
+                ross:textarea_minWidth="60dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

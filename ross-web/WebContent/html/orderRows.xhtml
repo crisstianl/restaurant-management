@@ -1,0 +1,77 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link href="css/orderRows.css" rel="stylesheet" />
+</h:head>
+
+<h:body>
+	<h:form id="master">
+		<div class="sectionA">
+			<h3>
+				<h:outputText value="Order #{OrderRowsBean.orderId}" />
+			</h3>
+			<p:commandButton value="Back" update=":content" actionListener="#{OrderRowsBean.backToOrders}" />	 
+		</div>
+    	<div class="sectionA">
+    		<!-- set order status -->
+			<h3>Status</h3>			
+			<h:selectOneMenu value="#{OrderRowsBean.docStatus}" styleClass="statusFilter">
+				<f:selectItems value="#{OrderRowsBean.docStates}" var="docStatus" itemLabel="#{docStatus.description}" itemValue="#{docStatus.id}"/>						
+				<f:ajax execute="@this" event="change" render="@this"/>
+			</h:selectOneMenu>
+		</div>
+		<div class="sectionB">
+			<h3>
+				<h:outputText value="Customer" />
+			</h3>
+			<h:outputText value="#{OrderRowsBean.customer}" />
+		</div>
+		<div class="sectionB">
+			<h3>
+				<h:outputText value="Total" />
+			</h3>
+			<h:outputText value="#{OrderRowsBean.total}" />
+		</div>
+		<div class="sectionB">
+			<h3>
+				<h:outputText value="Discount" />
+			</h3>
+			<h:outputText value="#{OrderRowsBean.discount}" />
+		</div>
+		<div class="sectionB">
+			<h3>
+				<h:outputText value="Date" />
+			</h3>
+			<h:outputText value="#{OrderRowsBean.creationDate}" />
+		</div>
+	</h:form> <!-- master -->
+	
+	<h:form id="details">
+		<p:dataTable value="#{OrderRowsBean.orderRows}" var="item" id="ordersList" styleClass="ordersList">		
+			<p:column headerText="Code" sortBy="orderRowId">
+				<h:outputText value="#{item.orderRowId}" />
+			</p:column>
+			<p:column headerText="Item code" sortBy="itemId">
+				<h:outputText value="#{item.itemId}" />								
+			</p:column>			
+			<p:column headerText="Item name" sortBy="itemTitle">
+				<h:outputText value="#{item.itemTitle}" />								
+			</p:column>
+			<p:column headerText="Total" sortBy="total">
+				<h:outputText value="#{item.total}" />								
+			</p:column>						
+			<p:column headerText="Discount" sortBy="discount">
+				<h:outputText value="#{item.discount}" />								
+			</p:column>	
+			<p:column headerText="Quantity" sortBy="quantity">
+				<h:outputText value="#{item.quantity}" />								
+			</p:column>											
+		</p:dataTable>
+	</h:form>
+		
+</h:body>
+</ui:composition>

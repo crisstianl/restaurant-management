@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<!-- Microsoft SQL Server, production
+		<property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=rossDB</property>
+		<property name="hibernate.connection.username">admin</property>
+		<property name="hibernate.connection.password">admin1234</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		-->
+		
+		<!-- H2 in memory database, test -->
+		<property name="hibernate.connection.url">jdbc:h2:./rossDB</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="connection.driver_class">org.h2.Driver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+		
+		<!-- create/update database schema for every session factory -->		
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="connection.pool_size">5</property>
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<!-- Print queries in the STDOUT (console) -->
+		<property name="show_sql">true</property>
+		
+		<!-- Classes annotated with entity -->
+		<mapping class="eu.cristianl.ross.entities.Admin" />
+		<mapping class="eu.cristianl.ross.entities.BaseCurrency" />
+		<mapping class="eu.cristianl.ross.entities.Category" />		
+		<mapping class="eu.cristianl.ross.entities.Contact" />
+		<mapping class="eu.cristianl.ross.entities.Currency" />
+		<mapping class="eu.cristianl.ross.entities.DocStatus" />
+		<mapping class="eu.cristianl.ross.entities.Employee" />
+		<mapping class="eu.cristianl.ross.entities.Item" />
+		<mapping class="eu.cristianl.ross.entities.Job" />
+		<mapping class="eu.cristianl.ross.entities.Order" />
+		<mapping class="eu.cristianl.ross.entities.OrderRow" />
+		<mapping class="eu.cristianl.ross.entities.Tag" />
+		<mapping class="eu.cristianl.ross.entities.Unit" />
+		<mapping class="eu.cristianl.ross.entities.UserSession" />
+		<mapping class="eu.cristianl.ross.entities.Worker" />
+		
+	</session-factory>
+
+</hibernate-configuration>
+
+<!-- 
+*** ENABLE SQL SERVER CONNECTION ***
+1.In the sql server management studio go to "Security->Logins->New Login"
+	->Login name: todo
+	->SQL Server authentification: check
+	->password: todo
+	->confirm password: todo
+	->Enforce password policy: uncheck
+
+2.In the sql server management studio right click on server name->Properties->Permissions
+	->Logins or roles: select login user
+	->Permissions for xxxx: grant all permissions
+3.In the sql configuration manager->SQL Server network configuration->Protocols for "xxxx"
+	->TCP/IP -> right click->Properties
+	->Enabled: set true;
+	->IP Adresses->IPALL->TCP Port: enter port(1433 default)
+ -->
+
+<!-- 
+**** ANNOTATIONS ****
+1.Transient -> to do not add field to the table (static fields are also ignored)
+2.Entity(name="") -> to set the entity and table name
+3.Table(name="") -> to set the table name, but leave the entity's name same as the class name 
+4.Temporal(TemporalType.DATE) -> save only the year, month and day of the timestamp
+5.Temporal(TemporalType.TIME) -> save only the hour, minute, second and milliseconds of the timestamp
+6.Temporal(TemporalType.DATE) -> save the full timestamp:year, month, day, hour, minute, second, milliseconds
+7.Lob -> to save large strings, with length greater than 255
+8.GeneratedValue(strategy=GeneratioType.AUTO) -> create a incremental surogate key(key without busines logic)
+9.GeneratedValue(strategy=GeneratioType.IDENTITY) -> create a incremental surogate key using the IDENTITY column of the table(for database which provides this feature)
+10.GeneratedValue(strategy=GeneratioType.SEQUENCE) -> create a incremental surogate key using the SEQUENCE table;
+11.GeneratedValue(strategy=GeneratioType.TABLE) -> create a incremental surogate key using a table created by hibernate
+12.Embedded -> applys to objects, helps programmers to group a part of the table's columns inside a separate java class
+13.Embeddable -> apply to the class which groups the entity's columns
+14.AttributeOverrides -> contains an array of AttributeOverride
+15.AttributeOverride -> when using an embedded object, you can change the default column name by providing the class member name and a new column name. Usefull when having the same embedded object twice inside same entity
+16.EmbeddedId -> for cases where the id of the entity is an object marked as embeddable. @Id and @Embedded cannot be used alongside with @EmbeddedId
+17.ElementCollection -> annotate collections members. A separate table will be created containing collection items.
+18.JoinTable -> give name to the table that contains the foreign key.
+19.JoinColumn ->give name to the column that contains the foreign key.
+20.CollectionId ->for indexed collections (eg:arraylist) give the column name, column type, and generator for the id column.
+21.GenericGenerator -> create a generator for @CollectionId using a hibernate strategy (eg:hilo).
+22.FetchType.EAGER -> fetch the elements of a collection in the same time with other fields of the entity
+23.FetchType.LAZY -> fetch the elements of a collection when the getter of the collection is called (default fetch type)
+24.OneToOne -> create a column inside entity that has o foreign key to another table.
+25.OneToMany -> create a separate table that contains the id of the entity and the rows of the collection
+26.ManyToOne -> create a reverse relation of OneToMany. Providing a @JoinColumn that adds a foreign key inside entity that points to the master table
+27.ManyToMany -> create two separate tables that maps the id of the first table to the second table, and another table that maps the id of the second table to the first table.
+28.NotFound -> tell hibernate to ignore a the foreign key constraint.
+29.DiscriminatorColumn -> for single table inheritance specify a name for the "DTYPE" column (for parent class)
+30.DiscriminatorValue -> for single table inheritance specify the value for the "DTYPE" column (for child class)
+
+ -->
+ 
+<!-- 
+*** COLLECTIONS ***
+1.List
+2.Set
+3.Map
+4.Collection
+-->

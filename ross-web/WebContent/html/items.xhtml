@@ -1,0 +1,82 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link href="css/items.css" rel="stylesheet" />	
+</h:head>
+
+<h:body>
+	
+	<h:form id="master">
+		<div class="section" style="margin-top: 0px;">
+			<h3>Category</h3>
+			<h:selectOneMenu id="categoryFilter" value="#{ItemsBean.categoryId}" styleClass="categoryFilter">
+				<f:selectItem  itemLabel="All" itemValue="" />
+				<f:selectItems value="#{ItemsBean.categories}" var="category" itemValue="#{category.id}" itemLabel="#{category.description}"/>						
+				<f:ajax execute="categoryFilter" event="change" listener="#{ItemsBean.onCategorySelected}" render="itemList details"/>
+			</h:selectOneMenu>
+		</div>
+		
+		<div class="section">	
+			<p:dataTable id="itemList" value="#{ItemsBean.items}" var="item" rowIndexVar="index" styleClass="itemList" 
+				selectionMode="single" selection="#{ItemsBean.selection}" rowKey="#{item.id}" 
+				paginator="true" rows="20" paginatorPosition="bottom"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords}" >
+				
+				<p:ajax event="rowSelect" update=":details" />
+				
+				<p:column>
+					<h:outputText value="#{index + 1}"/>
+				</p:column>
+				<p:column>
+					<h:outputText value="#{item.title}"/>								
+				</p:column>
+			</p:dataTable>
+		</div>
+						
+	</h:form>
+	
+	<h:form id="details">
+		<h:panelGroup id="detailsSection" layout="block" styleClass="section" rendered="#{ItemsBean.selection != null}">
+			<h3>Code</h3>
+			<h:outputText value="#{ItemsBean.selection.id}"/>
+			
+			<h3>Name</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ItemsBean.selection.title}" required="true"/>
+			</p:inplace>
+			
+			<h3>Description</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ItemsBean.selection.description}" required="true"/>
+			</p:inplace>
+			
+			<h3>Category</h3>
+			<p:inplace editor="true" label="#{ItemsBean.selection.category}">
+				<h:selectOneMenu value="#{ItemsBean.selection.categoryId}">
+					<f:selectItems value="#{ItemsBean.categories}" var="item" itemValue="#{item.id}" itemLabel="#{item.description}"/>						
+				</h:selectOneMenu>
+			</p:inplace>
+			
+			<h3>Price</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ItemsBean.selection.price}" required="true" type="number"/>
+			</p:inplace>
+			<h:outputText value="#{ItemsBean.selection.currency}"/>
+			
+			<h3>Discount</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ItemsBean.selection.discount}" required="true" type="number"/>
+			</p:inplace>
+			<h:outputText value="#{ItemsBean.selection.currency}"/>
+			
+			<br/>
+			<p:commandButton value="Save" actionListener="#{ItemsBean.saveItem}" style="margin-top: 30px;"/>
+		</h:panelGroup>
+	</h:form>	
+</h:body>
+</ui:composition>

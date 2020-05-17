@@ -1,0 +1,94 @@
+<resources>
+
+    <string name="app_name">ross-mobile</string>
+    
+    <string name="dictionary_none"></string>
+    <string name="dictionary_not_available">N/A</string>
+    <string name="dictionary_warning">Atentie</string>
+    <string name="dictionary_yes">Da</string>
+    <string name="dictionary_no">Nu</string>
+    <string name="dictionary_cancel">Cancel</string>
+    <string name="dictionary_ok">OK</string>
+    <string name="dictionary_delete">Sterge</string>
+    <string name="dictionary_next">Urmatorul</string>
+    <string name="dictionary_refresh">Refresh</string>
+    <string name="dictionary_no_internet_connection">Fara conexiune internet</string>
+    
+    <string name="main_options_menu_home_text">Acasa</string>
+    <string name="main_options_menu_new_text">Comanda</string>
+    <string name="main_options_menu_ready_text">Pregatite</string>
+    <string name="main_options_menu_pending_text">Drafturi</string>
+    <string name="main_options_menu_submitted_text">Trimise</string>
+    <string name="main_options_menu_search_text">Cautare</string>
+    
+    <string name="activity_login_greetings_text">Bine ati venit</string>
+    <string name="activity_login_confirm_button">Logare</string>
+    <string name="activity_login_invalid_fields">Completati campurile obligatorii</string>
+    <string name="activity_login_authentification_failed">Autentificare esuata</string>
+    
+    <string name="activity_generic_exit_message">Apasati de 2 ori ca sa inchideti aplicatia</string>
+    <string name="activity_generic_session_end_warning">Sesiune terminata</string>
+    
+    <string name="fragment_home_item_newOrder">Comanda nou</string>
+    <string name="fragment_home_item_ready">Pregatite</string>
+    <string name="fragment_home_item_pending">In Asteptare</string>
+    <string name="fragment_home_item_submitted">Trimise</string>
+    <string name="fragment_home_item_clear">Stergere</string>
+    <string name="fragment_home_item_exit">Iesire</string>
+    <string name="fragment_home_item_exit_warning">Confirmati ca vreti sa iesiti</string>
+    <string name="fragment_home_item_clear_warning">Confirmati stergerea tuturor documentelor</string>
+
+    <string-array name="fragment_contacts_list_header_titles">
+        <item>Cod</item>
+        <item>Nume</item>
+        <item>Prioritate</item>
+        <item>Dimensiune</item>
+    </string-array>
+    <string-array name="fragment_items_list_header_titles">
+        <item>Cod</item>
+        <item>Title</item>
+        <item>Categorie</item>
+        <item>Pret</item>
+    </string-array>
+
+    <string name="fragment_order_reuse_draft">Incarca comanda anterioara</string>
+    <string name="fragment_order_item_list_tab">Produse</string>
+    <string name="fragment_order_item_details_tab">Detalii</string>
+    <string name="fragment_order_item_sync_tab">Trimite</string>
+    <string name="fragment_order_items_add_error">Eroare la adaugare produs</string>
+    <string name="fragment_order_items_category">Selecteaza categorie</string>
+    
+    <string name="fragment_order_item_details_code_text">Cod</string>
+    <string name="fragment_order_item_details_title_text">Titlu</string>
+    <string name="fragment_order_item_details_description_text">Descriere</string>
+    <string name="fragment_order_item_details_category_text">Categorie</string>
+    <string name="fragment_order_item_details_price_text">Pret</string>
+    <string name="fragment_order_item_details_discount_text">Discount</string>
+    <string name="fragment_order_item_details_total_text">Total</string>
+    
+    <string name="fragment_order_sync_header_contact_text">Contact</string>
+    <string name="fragment_order_sync_header_party_text">Dimensiune</string>
+    <string name="fragment_order_sync_header_total_text">Total</string>
+    <string name="fragment_order_sync_pend_text">Pend</string>
+    <string name="fragment_order_sync_send_text">Send</string>
+    <string name="fragment_order_sync_pend_send_error">Eroare la trimitere</string>
+    <string name="fragment_order_sync_pend_send_no_rows_error">Nici un produs comandat</string>
+    <string name="fragment_order_sync_delete_error">Eroare la stergerea produsului</string>
+    <string name="fragment_order_sync_delete_order_warning">Confirmati stergerea comenzii</string>
+    <string name="fragment_order_exit_warning">Confirmati ca vreti sa iesiti</string>
+
+    <string-array name="fragment_docs_list_adapter_ready_titles">
+        <item>Contact</item>
+        <item>Data</item>
+        <item>Status</item>
+        <item>Total</item>
+    </string-array>
+
+    <string name="fragment_docs_list_send_delete">Sterge</string>
+    <string name="fragment_docs_list_send_order">Trimite</string>
+    <string name="fragment_docs_list_complete_order">Gata</string>
+    <string name="fragment_docs_list_close_order">Inchide</string>
+    <string name="gcm_broadcast_receiver_ready_order">Comanda este pregatita</string>
+    <string name="gcm_broadcast_receiver_closed_order">Comanda a fost finalizata</string>
+
+</resources>

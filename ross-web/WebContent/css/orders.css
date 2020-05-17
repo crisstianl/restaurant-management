@@ -1,0 +1,66 @@
+/* CONTENT */
+#master {
+	display: inline-block;
+	float: left;
+	width: 25%;
+	padding: 10px 10px 0px 10px;
+	box-sizing: border-box;
+	min-height: 800px;	
+	background-color: #D8D8D8;
+	border-right: 5px solid white;
+}
+#details {
+	display: inline-block;
+	float: right;
+	width: 75%;
+	padding: 0px;
+	box-sizing: border-box;
+	min-height: 800px;
+	background-color: #D8D8D8;
+}
+
+/* MASTER */
+#master .section {
+	display: block;
+	width: 100%;
+	margin: 30px 0 0 0;
+	font-size: medium;
+}
+#master input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: medium;
+	font-family: sans-serif;
+}
+#master .statusFilter {
+	display: block;
+	width: 100%;
+	font-size: medium;
+	font-family: sans-serif;
+}
+#master .employeeList {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-size: medium;
+	font-family: sans-serif;
+}
+
+/* DETAILS */
+#details .section {
+	display: block;
+	width: 100%;
+	margin: 30px 0 0 0;
+	font-size: large;
+}
+#details input {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: medium;
+	font-family: sans-serif;
+}
+#details .ordersList {
+	display: block;
+	width: 100%;
+}

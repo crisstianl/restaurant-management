@@ -1,0 +1,13 @@
+#content {
+	background-color: #D8D8D8;
+}
+
+#content table {
+	position: relative;
+	width: 100%;
+	margin-top: 50px;
+	text-align: center;	
+	font-size: 26px;
+	font-family: sans-serif;
+	font-weight: bold;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/list_item_height"
+    android:paddingLeft="@dimen/padding_micro"
+    android:paddingRight="@dimen/padding_micro" >
+
+    <ImageView
+        android:id="@+id/fragment_contacts_adapter_contact_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_micro"
+        android:background="@drawable/ic_action_person_normal"
+        android:contentDescription="@string/dictionary_none" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20" >
+
+        <TextView
+            android:id="@+id/fragment_contacts_adapter_contact_id"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30" >
+
+        <TextView
+            android:id="@+id/fragment_contacts_adapter_contact_name"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10" >
+
+        <TextView
+            android:id="@+id/fragment_contacts_adapter_contact_priority"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20" >
+
+        <LinearLayout
+            android:id="@+id/fragment_contacts_adapter_tags_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20" >
+
+        <TextView
+            android:id="@+id/fragment_contacts_adapter_contact_party"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</LinearLayout>

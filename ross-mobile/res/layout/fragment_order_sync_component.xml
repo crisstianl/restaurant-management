@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_micro"
+    android:paddingRight="@dimen/padding_micro" >
+
+    <LinearLayout
+        android:id="@+id/fragment_order_sync_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:baselineAligned="true" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="45" >
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_contact_text"
+                style="@style/textLabelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_order_sync_header_contact_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_contact"
+                style="@style/textLabelTitleNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_micro" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" >
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_party_text"
+                style="@style/textLabelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_order_sync_header_party_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_party"
+                style="@style/textLabelTitleNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_micro" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="35"
+            android:gravity="right" >
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_total_text"
+                style="@style/textLabelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_order_sync_header_total_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_order_sync_header_total"
+                style="@style/textLabelTitleNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_micro" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/fragment_order_sync_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/fragment_order_sync_header"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/background_holo_dark" />
+
+    <ListView
+        android:id="@+id/fragment_order_sync_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_order_sync_divider_1"
+        android:layout_marginBottom="50dp"
+        android:divider="@drawable/apptheme_list_item_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/fragment_order_sync_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dictionary_cancel" />
+
+        <Button
+            android:id="@+id/fragment_order_sync_pend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fragment_order_sync_pend_text" />
+
+        <Button
+            android:id="@+id/fragment_order_sync_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fragment_order_sync_send_text" />
+    </LinearLayout>
+
+</RelativeLayout>

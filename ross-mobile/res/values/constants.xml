@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="restaurant_name">Lo primo ristorante</string>
+    <string name="SERVER_ADDRESS">http://192.168.0.9:8080/ross-web</string>
+    
+    <!-- DATE AND TIME FORMATS -->
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="time_format">HH:mm</string>
+    <string name="time_long_format">HH:mm:ss</string>
+    <string name="time_date_format">HH:mm dd/MM/yyyy</string>
+    <string name="date_time_format">dd/MM/yyyy HH:mm</string>
+    <string name="date_database_format">yyyy-MM-dd</string>
+    <string name="timestamp_database_format">yyyy-MM-dd HH:mm:ss</string>
+
+</resources>

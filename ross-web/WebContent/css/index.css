@@ -1,0 +1,90 @@
+body {
+	padding: 10px 10px 10px 10px;
+	background-color: white;
+}
+
+h3,h4,h5 {
+	color: #1a9ccb;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+}
+
+#container {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+#header {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 110px;	
+	background-color: #33B5E5;
+}
+#menu {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;	
+	margin-top: 5px;
+	background-color: #999999;
+}
+#content {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 800px;
+	margin-top: 5px;
+	overflow: hidden;
+}
+
+/* HEADER */
+#header .logo {
+	display: inline-block;
+	padding: 0px 5px 10px 10px;
+}
+#header .logo img {
+	width: 100px;
+	height: 100px;
+}
+#header .login {
+	display: inline-block;
+	float: right;
+	padding: 5px 10px 5px 5px;
+}
+#header .login .inputText {
+	font-size: medium;
+}
+#header .login .commandBtn {
+	width: 80px;
+	float: right;
+	cursor: pointer;
+	font-size: medium;
+}
+
+/* MENU*/
+#menu .menuForm {
+	display: inline-block;
+	float: left;
+	padding: 10px 10px 10px 10px;
+}
+#menu .menuItem {
+	margin: 0px 10px 0px 10px;
+	list-style-type: none;
+	text-align: center;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: large;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+#menu .menuItem:hover {
+	color: black;
+	border-bottom: 2px solid #33B5E5; 	
+}
+#menu .menuItem.active {
+	color: black;
+	border-bottom: 2px solid #33B5E5;
+}
+
+/* CONTENT */

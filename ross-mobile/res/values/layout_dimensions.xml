@@ -1,0 +1,22 @@
+<resources>
+
+    <integer-array name="fragment_contacts_list_header_cell_weight">
+        <item>20</item>
+        <item>30</item>
+        <item>30</item>
+        <item>20</item>
+    </integer-array>
+    <integer-array name="fragment_items_list_header_cell_weight">
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>25</item>
+    </integer-array>
+    <integer-array name="fragment_docs_list_header_cell_weight">
+        <item>35</item>
+        <item>25</item>
+        <item>20</item>
+        <item>20</item>
+    </integer-array>
+
+</resources>

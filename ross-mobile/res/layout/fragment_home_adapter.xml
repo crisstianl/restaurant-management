@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/highlighted_text_holo_dark"
+    android:minHeight="100dp" >
+
+    <ImageView
+        android:id="@+id/fragment_home_adapter_icon"
+        android:layout_width="@dimen/home_menu_item"
+        android:layout_height="@dimen/home_menu_item"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/dictionary_none" />
+
+    <TextView
+        android:id="@+id/fragment_home_adapter_title"
+        style="@style/textLabelTitleNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_home_adapter_icon"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/background" />
+
+</RelativeLayout>

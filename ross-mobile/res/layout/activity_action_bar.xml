@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/activity_action_bar_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:background="@drawable/ic_action_view_as_grid"
+        android:contentDescription="@string/dictionary_none" />
+
+    <ImageView
+        android:id="@+id/activity_action_bar_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_toRightOf="@id/activity_action_bar_home"
+        android:background="@drawable/ic_action_import_export"
+        android:contentDescription="@string/dictionary_none" />
+
+    <ImageView
+        android:id="@+id/activity_action_bar_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_toRightOf="@id/activity_action_bar_ready"
+        android:background="@drawable/ic_action_add_to_queue"
+        android:contentDescription="@string/dictionary_none" />
+
+    <ImageView
+        android:id="@+id/activity_action_bar_inprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_toRightOf="@id/activity_action_bar_pending"
+        android:background="@drawable/ic_action_upload"
+        android:contentDescription="@string/dictionary_none" />
+
+    <ImageView
+        android:id="@+id/activity_action_bar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_toRightOf="@id/activity_action_bar_inprogress"
+        android:background="@drawable/ic_action_search"
+        android:contentDescription="@string/dictionary_none" />
+
+    <TextView
+        android:id="@+id/activity_action_bar_user"
+        style="@style/textActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/activity_action_bar_logout" />
+
+    <ImageView
+        android:id="@id/activity_action_bar_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_action_person"
+        android:contentDescription="@string/dictionary_none" />
+
+</RelativeLayout>

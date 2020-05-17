@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ListHeader">
+        <attr name="drawableAsc" format="integer" />
+        <attr name="drawableDesc" format="integer" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="selectionColor" format="color" />        
+        <attr name="titles" format="reference" />
+        <attr name="titleWeight" format="reference" />
+        <attr name="titleStyle" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="NumberPicker">
+        <attr name="plusminus_width" format="dimension" />
+        <attr name="plusminus_height" format="dimension" />
+        <attr name="textarea_minWidth" format="dimension" />
+        <attr name="textarea_height" format="dimension" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,93 @@
+<resources>
+
+    <string name="app_name">ross-mobile</string>
+    <string name="dictionary_none"></string>
+    <string name="dictionary_not_available">N/A</string>
+    <string name="dictionary_warning">Attention</string>
+    <string name="dictionary_yes">Yes</string>
+    <string name="dictionary_no">No</string>
+    <string name="dictionary_cancel">Cancel</string>
+    <string name="dictionary_ok">OK</string>
+    <string name="dictionary_delete">Delete</string>
+    <string name="dictionary_next">Next</string>
+    <string name="dictionary_refresh">Refresh</string>
+    <string name="dictionary_no_internet_connection">No internet connection</string>
+    
+    <string name="main_options_menu_home_text">Home</string>
+    <string name="main_options_menu_new_text">Order</string>
+    <string name="main_options_menu_ready_text">Ready</string>
+    <string name="main_options_menu_pending_text">Drafts</string>
+    <string name="main_options_menu_submitted_text">Sent</string>
+    <string name="main_options_menu_search_text">Search</string>
+    
+    <string name="activity_login_greetings_text">Welcome</string>
+    <string name="activity_login_confirm_button">Login</string>
+    <string name="activity_login_invalid_fields">Complete requested fields</string>
+    <string name="activity_login_authentification_failed">Authentification failed</string>
+    
+    <string name="activity_generic_exit_message">Press 2 times to close application</string>
+    <string name="activity_generic_session_end_warning">Session finished</string>
+    
+    <string name="fragment_home_item_newOrder">New</string>
+    <string name="fragment_home_item_ready">Ready</string>
+    <string name="fragment_home_item_pending">Drafts</string>
+    <string name="fragment_home_item_submitted">Sent</string>
+    <string name="fragment_home_item_clear">Delete</string>
+    <string name="fragment_home_item_exit">Logout</string>
+    <string name="fragment_home_item_exit_warning">Are you sure you want to quit</string>
+    <string name="fragment_home_item_clear_warning">Are you sure you want to delete all documents</string>
+
+    <string-array name="fragment_contacts_list_header_titles">
+        <item>Code</item>
+        <item>Name</item>
+        <item>Priority</item>
+        <item>Party</item>
+    </string-array>
+    <string-array name="fragment_items_list_header_titles">
+        <item>Code</item>
+        <item>Title</item>
+        <item>Category</item>
+        <item>Price</item>
+    </string-array>
+
+    <string name="fragment_order_reuse_draft">Load previous order</string>
+    <string name="fragment_order_item_list_tab">Items</string>
+    <string name="fragment_order_item_details_tab">Details</string>
+    <string name="fragment_order_item_sync_tab">Send</string>
+    <string name="fragment_order_items_add_error">Failed to add row</string>
+    <string name="fragment_order_items_category">Select category</string>
+    
+    <string name="fragment_order_item_details_code_text">Code</string>
+    <string name="fragment_order_item_details_title_text">Title</string>
+    <string name="fragment_order_item_details_description_text">Description</string>
+    <string name="fragment_order_item_details_category_text">Category</string>
+    <string name="fragment_order_item_details_price_text">Price</string>
+    <string name="fragment_order_item_details_discount_text">Discount</string>
+    <string name="fragment_order_item_details_total_text">Total</string>
+    
+    <string name="fragment_order_sync_header_contact_text">Contact</string>
+    <string name="fragment_order_sync_header_party_text">Party</string>
+    <string name="fragment_order_sync_header_total_text">Total</string>
+    <string name="fragment_order_sync_pend_text">Pend</string>
+    <string name="fragment_order_sync_send_text">Send</string>
+    <string name="fragment_order_sync_pend_send_error">Failed to execute command</string>
+    <string name="fragment_order_sync_pend_send_no_rows_error">No items ordered</string>
+    <string name="fragment_order_sync_delete_error">Failed to remove row</string>
+    <string name="fragment_order_sync_delete_order_warning">Are you sure you want to cancel</string>
+    <string name="fragment_order_exit_warning">Are you sure you want to quit</string>
+
+    <string-array name="fragment_docs_list_adapter_ready_titles">
+        <item>Contact</item>
+        <item>Created</item>
+        <item>Status</item>
+        <item>Total</item>
+    </string-array>
+
+    <string name="fragment_docs_list_send_delete">Delete</string>
+    <string name="fragment_docs_list_send_order">Send</string>
+    <string name="fragment_docs_list_complete_order">Ready</string>
+    <string name="fragment_docs_list_close_order">Close</string>
+    <string name="gcm_broadcast_receiver_ready_order">New order ready</string>
+    <string name="gcm_broadcast_receiver_closed_order">New order closed</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link href="css/contacts.css" rel="stylesheet" />	
+</h:head>
+
+<h:body>
+	
+	<h:form id="master">
+		<div class="section">
+			<p:dataTable id="contactList" value="#{ContactsBean.contacts}" var="item" rowIndexVar="index" styleClass="contactList" 
+				selectionMode="single" selection="#{ContactsBean.selection}" rowKey="#{item.id}" 
+				paginator="true" rows="20" paginatorPosition="bottom"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}"
+				currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords}" >
+				
+				<p:ajax event="rowSelect" update=":details" />
+				
+				<p:column>
+					<h:outputText value="#{index + 1}"/>
+				</p:column>
+				<p:column>
+					<h:outputText value="#{item.name}"/>								
+				</p:column>
+			</p:dataTable>
+		</div>
+						
+	</h:form>
+	
+	<h:form id="details">
+		<h:panelGroup id="detailsSection" layout="block" styleClass="section" rendered="#{ContactsBean.selection != null}">
+			<h3>Code</h3>
+			<h:outputText value="#{ContactsBean.selection.id}"/>
+			
+			<h3>Name</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ContactsBean.selection.name}" required="true"/>
+			</p:inplace>
+			
+			<h3>Priority</h3>
+			<p:inplace editor="true" label="#{ContactsBean.selection.priority}">
+				<h:selectOneMenu value="#{ContactsBean.selection.priorityId}">
+					<f:selectItems value="#{ContactsBean.priorities}" var="item" itemValue="#{item.code}" itemLabel="#{item.name()}"/>						
+				</h:selectOneMenu>
+			</p:inplace>
+			
+			<h3>People</h3>
+			<p:inplace editor="true">
+				<p:inputText value="#{ContactsBean.selection.party}" required="true" type="number"/>
+			</p:inplace>
+			
+			<br/>
+			<p:commandButton value="Save" actionListener="#{ContactsBean.saveContact}" style="margin-top: 30px;"/>
+		</h:panelGroup>
+	</h:form>	
+</h:body>
+</ui:composition>

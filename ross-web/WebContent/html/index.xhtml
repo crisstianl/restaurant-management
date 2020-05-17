@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>ross-web</title>
+	<link href="css/index.css" rel="stylesheet" />
+</h:head>
+
+<h:body>
+	<div id="container">
+		<div id="header">
+			<div class="logo">
+				<img src="assets/images/app_logo.png" alt="logo"/>
+			</div>
+			
+			<div class="login">
+				<h:form id="loginForm">
+					<p:growl id="growl" showDetail="true"/>	
+					<h:panelGrid columns="1">
+						<p:tooltip for="name" showEvent="focus" hideEvent="blur" />
+						<h:inputText value="#{LoginBean.username}" id="name" styleClass="inputText" title="Name" />
+						
+						<p:tooltip for="pass" showEvent="focus" hideEvent="blur" />
+						<h:inputSecret value="#{LoginBean.password}" id="pass" styleClass="inputText" title="Password" />
+						
+						<h:commandButton value="#{LoginBean.loginStatus}" actionListener="#{LoginBean.toggleLogin}" styleClass="commandBtn">
+					  		<f:ajax  execute="name pass" render=":loginForm :menu :content"/>
+						</h:commandButton>
+					</h:panelGrid>					
+				</h:form>
+			</div>
+		</div> <!-- header -->
+
+		<h:panelGroup id="menu" layout="block">
+			<h:form id="menuForm" class="menuForm">
+				<h:commandLink action="#{NavigatorBean.setEmployeesPage}" value="Employees" styleClass="menuItem" onclick="activateLink(this)">
+					<f:ajax execute="@this" render=":content"/>
+				</h:commandLink>
+				<h:commandLink action="#{NavigatorBean.setOrdersPage}" value="Orders" styleClass="menuItem" onclick="activateLink(this)">
+					<f:ajax execute="@this" render=":content"/>
+				</h:commandLink>
+				<h:commandLink action="#{NavigatorBean.setContactsPage}" value="Contacts" styleClass="menuItem" onclick="activateLink(this)">
+					<f:ajax execute="@this" render=":content"/>
+				</h:commandLink>
+				<h:commandLink action="#{NavigatorBean.setItemsPage}" value="Products" styleClass="menuItem" onclick="activateLink(this)">
+					<f:ajax execute="@this" render=":content"/>
+				</h:commandLink>
+			</h:form>
+		</h:panelGroup> <!-- menu -->
+
+		<h:panelGroup id="content" layout="block">
+			<ui:include src="#{NavigatorBean.currentPage}" />
+		</h:panelGroup> <!-- content -->
+	</div> <!-- container -->	
+
+	<script src="js/index.js"></script>
+</h:body>
+</html>

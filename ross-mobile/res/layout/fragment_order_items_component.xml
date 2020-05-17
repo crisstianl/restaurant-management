@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ross="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <eu.cristianl.ross.android.widgets.ListHeader
+        android:id="@+id/fragment_order_items_component_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        ross:backgroundColor="@color/highlighted_text_holo_dark"
+        ross:drawableAsc="@drawable/ic_down_holo_dark"
+        ross:drawableDesc="@drawable/ic_up_holo_dark"
+        ross:selectionColor="@color/holo_blue_light"
+        ross:titleStyle="@style/textLabelTitleNormal"
+        ross:titleWeight="@array/fragment_items_list_header_cell_weight"
+        ross:titles="@array/fragment_items_list_header_titles" />
+
+    <ListView
+        android:id="@+id/fragment_order_items_component_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_order_items_component_list_header"
+        android:layout_marginBottom="@dimen/list_item_height"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/apptheme_list_item_divider" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_order_items_component_categories"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/holo_gray_light" >
+
+        <ImageView
+            android:id="@+id/fragment_order_items_component_category_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_action_collapse"
+            android:contentDescription="@string/dictionary_none" />
+
+        <TextView
+            android:id="@+id/fragment_order_items_component_category"
+            style="@style/textLabelTitleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/fragment_order_items_component_category_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_action_remove"
+            android:contentDescription="@string/dictionary_none" />
+    </RelativeLayout>
+
+</RelativeLayout>
